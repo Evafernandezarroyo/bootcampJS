@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=daysEnd, initial-scale=1.0">
+    <title>Calendario Vacaciones</title>
+    <link rel="stylesheet" type="text/css" href="calendar.css" />
+    <script>
+        alert("prueba");
+    </script>
+</head>
+
+<body>
+    <form id="formulario">
+        <h2>Fecha de inicio</h2>
+        <input type="date" id="start_date" class="start_date" />
+        <h2>Fecha de fin</h2>
+        <input type="date" id="end_date" class="end_date" />
+        <h2>Horas por jornada</h2>
+        <input type="number" id="daily_hours" min="2" max="8" class="daily" step="0.5" /><br>
+        <button type="button" onclick=" " id="button">Calcular</button>
+
+    </form>
+    <script>
+        const holiday_by_day = 0.0822;
+        let start_date = document.querySelector('#start_date');
+        let end_date = document.querySelector('#end_date');
+        let daily_hours = document.querySelector('#daily_hours');
+        console.log(typeof start_date);
+        console.log(typeof end_date);
+        function calculteDays(start_date, end_date) {
+            let timeStart = new Date(document.getElementById(start_date).value);
+            let timeEnd = new Date(document.getElementById(end_date).value);
+            if (timeEnd > timeStart) {
+                let actualData = timeEnd.getTime() - timeStart.getTime();
+                let end_days_calculate = Math.round(actualData / (1000 * 60 * 60 * 24));
+                return console.log(end_days_calculate)
+            }
+        }
+        function calculateHoliday(daysEnd,holiday_by_day){
+            if(end_days_calculate !== 0){
+                let holiday = end_days_calculate * holiday_by_day;
+                return holiday
+            }
+        }
+    </script>
+</body>
+
+</html>

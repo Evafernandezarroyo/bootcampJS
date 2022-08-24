@@ -1,0 +1,35 @@
+.calendar {
+    background-color: aqua;
+    width: 80px;
+    max-width: 600px;
+    margin: 1px auto;
+    }
+#calendarInfo{
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    }
+button{
+    cursor: pointer;
+    clip: initial;
+    background-color: blue;
+}
+button.next{
+    margin-left: auto;
+}
+button.previus{
+    margin-right: auto;
+}
+.mon , .years {
+    padding: 1em, 1em;
+
+}
+#calendarWeek{
+    display: grid;
+    grid-template-columns:repead(7 ,1fr);
+    -ms-grid-column-align: 10px;
+}
+#items{
+    text-align: center;
+    line-height: 2;
+}
